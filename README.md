@@ -4,25 +4,13 @@ Inspiration from the code is either practice problems for online resources or pe
 # File Listings
 ## CS50P
 ### Week 0
-einstein
-faces
-indoor
-playback
-tip
+einstein, faces, indoor, playback, tip
 
 ### Week 1
-bank
-deep
-extensions
-interpreter
-meal
+bank, deep, extensions, interpreter, meal
 
 ### Week 2
-camel
-coke
-nutrition
-plates
-twttr
+camel, coke, nutrition, plates, twttr
 
 ## Personal Tests
-fav_color.py
+fav_color
