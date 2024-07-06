@@ -1,25 +1,27 @@
 def main():
-    name=input("File name: ").strip().lower()
-
-    if name.endswith("gif"):
-        print("image/gif")
-
-    elif name.endswith("jpg") or name.endswith("jpeg"):
-        print("image/jpeg")
+    file_ext(input("File name: ").strip().lower())
 
 
-    elif name.endswith("png"):
-        print("image/png")
-
-    elif name.endswith("pdf"):
-        print("application/pdf")
-
-    elif name.endswith("txt"):
-        print("text/plain")
-
-    elif name.endswith("zip"):
-        print("application/zip")
-
-    else:
+def file_ext(s):
+    file_dict = {
+        "gif" : "image/gif",
+        "jpg" : "image/jpeg",
+        "jpeg" : "image/jpeg",
+        "png" : "image/png",
+        "pdf" : "application/pdf",
+        "txt" : "text/plain",
+        "zip" : "application/zip",
+    }
+    #rsplit to split on final "." for file names such as 'appl.fruit.pdf'
+    #iterate across dict on extension split
+    F, E = s.rsplit(".", 1)
+    try:
+        print(file_dict[E])
+    except KeyError: #utilize key error for other category
         print("application/octet-stream")
+    else:
+        return
+
+
+        
 main()
